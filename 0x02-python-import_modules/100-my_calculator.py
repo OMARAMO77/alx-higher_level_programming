@@ -7,16 +7,16 @@ if __name__ == '__main__':
     if n == 3:
         if argv[2] == '+':
             result = add(int(argv[1]), int(argv[3]))
-            print('{:s} + {:s} = {:s}'.format(argv[1], argv[3], result))
+            print('{:s} + {:s} = {:d}'.format(argv[1], argv[3], result))
         elif argv[2] == '-':
-            result = sub(int(argv[1]), int(argv[2]))
-            print('{:s} - {:s} = {:s}'.format(argv[1], argv[3], result))
+            result = sub(int(argv[1]), int(argv[3]))
+            print('{:s} - {:s} = {:d}'.format(argv[1], argv[3], result))
         elif argv[2] == '*':
-            result = mul(int(argv[1]), int(argv[2]))
-            print('{:s} * {:s} = {:s}'.format(argv[1], argv[3], result))
+            result = mul(int(argv[1]), int(argv[3]))
+            print('{:s} * {:s} = {:d}'.format(argv[1], argv[3], result))
         elif argv[2] == '/':
-            result = div(int(argv[1]), int(argv[2]))
-            print('{:s} / {:s} = {:s}'.format(argv[1], argv[3], result))
+            result = div(int(argv[1]), int(argv[3]))
+            print('{:s} / {:s} = {:d}'.format(argv[1], argv[3], result))
         else:
             print('Unknown operator. Available operators: +, -, * and /')
             exit(1)
