@@ -8,15 +8,19 @@ if __name__ == '__main__':
         if argv[2] == '+':
             result = add(int(argv[1]), int(argv[3]))
             print('{:s} + {:s} = {:d}'.format(argv[1], argv[3], result))
+			exit(0)
         elif argv[2] == '-':
             result = sub(int(argv[1]), int(argv[2]))
             print('{:s} - {:s} = {:d}'.format(argv[1], argv[3], result))
+			exit(0)
         elif argv[2] == '*':
             result = mul(int(argv[1]), int(argv[2]))
             print('{:s} * {:s} = {:d}'.format(argv[1], argv[3], result))
+			exit(0)
         elif argv[2] == '/':
             result = div(int(argv[1]), int(argv[2]))
             print('{:s} / {:s} = {:d}'.format(argv[1], argv[3], result))
+			exit(0)
         else:
             print('Unknown operator. Available operators: +, -, * and /')
             exit(1)
