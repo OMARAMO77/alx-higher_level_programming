@@ -5,10 +5,9 @@ def roman_to_int(roman_string):
     res = 0
     prev = 0
     for lett in roman_string:
-        val = dict.get(lett, 0)
-        if val > prev:
-            res += val - 2 * prev
-        else:
-            res += val
-        prev = val
+        if lett in dict:
+            res += dict[lett]
+            if dict[lett] > prev:
+                res -= - 2 * prev
+            prev = dict[lett]
     return res
