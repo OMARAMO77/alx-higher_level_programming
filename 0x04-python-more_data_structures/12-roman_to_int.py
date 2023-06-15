@@ -10,4 +10,6 @@ def roman_to_int(roman_string):
             if dict[lett] > prev:
                 res -= - 2 * prev
             prev = dict[lett]
+        else:
+            return (0)
     return res
