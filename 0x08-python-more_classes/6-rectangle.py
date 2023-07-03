@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """A rectangle module"""
 
+
 class Rectangle:
     """Defines a reactangle"""
     number_of_instances = 0
