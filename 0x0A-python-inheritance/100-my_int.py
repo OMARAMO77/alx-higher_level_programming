@@ -12,3 +12,7 @@ class MyInt(int):
         """not equal to comparison"""
         if self.value is x:
             return True
+
+    def __eq__(self, x):
+        """equal to comparison"""
+        return (int(self) == num)
