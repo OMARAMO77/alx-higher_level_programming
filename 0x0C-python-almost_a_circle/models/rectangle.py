@@ -97,4 +97,4 @@ class Rectangle(Base):
         """
         ---
         """
-        return self.__width * self.__heigh
+        return (self.__width * self.__heigh)
