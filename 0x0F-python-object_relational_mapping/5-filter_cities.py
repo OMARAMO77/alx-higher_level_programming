@@ -14,16 +14,16 @@ if __name__ == '__main__':
     cur = db.cursor()
     cnt = cur.execute("SELECT cities.name FROM cities \
                       WHERE state_id = \
-                      (SELECT id FROM states WHERE name LIKE BINARY %s) \
+                      (SELECT id FROM states WHERE name=%s) \
                       ORDER BY cities.id", (argv[4],))
     rows = cur.fetchall()
 
     i = 1
     for row in rows:
-        if i != cnt:
-            print(row[0], end=', ')
-        else:
-            print(row[0])
+        print(row[0], end='')
+        if i < cnt:
+            print(end=', ')
         i += 1
+    print()
     cur.close()
     db.close()
