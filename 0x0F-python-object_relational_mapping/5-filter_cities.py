@@ -12,9 +12,10 @@ if __name__ == '__main__':
                          passwd=argv[2], db=argv[3])
 
     cur = db.cursor()
-    cnt = cur.execute("SELECT cities.name FROM cities WHERE state_id = \
-                (SELECT id FROM states WHERE name=%s) \
-                ORDER BY cities.id", (argv[4],))
+    cnt = cur.execute("SELECT cities.name FROM cities \
+                      WHERE state_id = \
+                      (SELECT id FROM states WHERE name LIKE BINARY %s) \
+                      ORDER BY cities.id", (argv[4],))
     rows = cur.fetchall()
 
     i = 1
