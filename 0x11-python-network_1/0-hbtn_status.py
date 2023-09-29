@@ -2,12 +2,13 @@
 """
 a script that fetches https://alx-intranet.hbtn.io/status
 """
+from urllib.request import urlopen
+
 
 if __name__ == "__main__":
-    import urllib.request
-
-    with urllib.request.urlopen('https://intranet.hbtn.io/status') as res:
-        content = res.read()
+    url = 'https://intranet.hbtn.io/status'
+    with urlopen(url) as response:
+        content = response.read()
         print("Body response:")
         print("\t- type: {}".format(type(content)))
         print("\t- content: {}".format(content))
