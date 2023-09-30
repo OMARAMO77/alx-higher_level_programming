@@ -16,4 +16,4 @@ if __name__ == "__main__":
     obj = response.json()
 
     for commit in obj[0:10]:
-        print(commit['sha'] + ':', commit['commit']['author']['name'])
+        print(commit['sha'] + ': ' + commit['commit']['author']['name'])
