@@ -9,12 +9,12 @@ request(apiurl, function (err, response, body) {
   }
 });
 
-function printCharacters (characters, index) {
-  request(characters[index], function (error, response, content) {
+function printCharacters (characters, idx) {
+  request(characters[idx], function (error, response, content) {
     if (!error) {
       console.log(JSON.parse(content).name);
-      if (index + 1 < characters.length) {
-        printCharacters(characters, index + 1);
+      if (idx + 1 < characters.length) {
+        printCharacters(characters, idx + 1);
       }
     }
   });
